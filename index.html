@@ -1,2 +1,115 @@
-<h1>My AI Dashboard is Live 🚀</h1>
-<p>This is my first website on GitHub Pages</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Dashboard V2</title>
+  <style>
+    body{
+      font-family: Arial;
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+    .box{
+      background:#1e293b;
+      padding:20px;
+      margin:10px auto;
+      width:90%;
+      max-width:800px;
+      border-radius:12px;
+    }
+    input, select{
+      width:85%;
+      padding:10px;
+      margin:8px;
+      border-radius:8px;
+      border:none;
+    }
+    button{
+      padding:10px 20px;
+      background:#22c55e;
+      border:none;
+      border-radius:8px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    .output{
+      text-align:left;
+      white-space:pre-line;
+      margin-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🚀 AI VIDEO DASHBOARD V2</h1>
+
+<div class="box">
+
+  <input id="title" placeholder="Working Title">
+  <input id="genre" placeholder="Genre (Suspense / Sci-fi / History)">
+  <input id="concept" placeholder="Core Concept">
+
+  <br><br>
+  <button onclick="generate()">Generate AI Video Plan</button>
+
+</div>
+
+<div class="box">
+  <h2>📊 OUTPUT</h2>
+  <div id="out" class="output"></div>
+</div>
+
+<script>
+function generate(){
+
+let t = document.getElementById("title").value || "Untitled Story";
+let g = document.getElementById("genre").value || "General";
+let c = document.getElementById("concept").value || "No concept";
+
+let result = `
+🎬 TITLE: ${t}
+
+📚 GENRE: ${g}
+
+🧠 CORE CONCEPT:
+${c}
+
+-----------------------
+
+🔍 RESEARCH:
+- Origin of ${c}
+- Key facts
+- Emotional angle
+
+✍️ SCRIPT (HOOK):
+This is the untold story of ${c}...
+Everything changed in a single moment...
+
+🎬 SCENES:
+1. Hook (0-3 sec)
+2. Mystery
+3. Build-up
+4. Twist
+5. Ending
+
+🎨 AI PROMPTS:
+- Cinematic ${c}
+- Ultra realistic
+- Dramatic lighting
+- Movie style visuals
+
+📈 YOUTUBE TITLE IDEAS:
+- The Secret of ${t}
+- Untold Story of ${c}
+- Why ${c} Changed Everything
+`;
+
+document.getElementById("out").innerText = result;
+
+}
+</script>
+
+</body>
+</html>
