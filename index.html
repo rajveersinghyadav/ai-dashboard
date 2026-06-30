@@ -4,7 +4,7 @@
 
 <head>
 
-  <title>AI Dashboard V2</title>
+  <title>AI Viral Dashboard V3</title>
 
   <style>
 
@@ -38,7 +38,7 @@
 
     }
 
-    input, select{
+    input{
 
       width:85%;
 
@@ -84,25 +84,25 @@
 
 <body>
 
-<h1>🚀 AI VIDEO DASHBOARD V2</h1>
+<h1>🚀 AI VIRAL VIDEO ENGINE V3</h1>
 
 <div class="box">
 
-  <input id="title" placeholder="Working Title">
+  <input id="title" placeholder="Video Title">
 
-  <input id="genre" placeholder="Genre (Suspense / Sci-fi / History)">
+  <input id="genre" placeholder="Genre (Suspense / History / Sci-fi)">
 
   <input id="concept" placeholder="Core Concept">
 
   <br><br>
 
-  <button onclick="generate()">Generate AI Video Plan</button>
+  <button onclick="generate()">Generate Viral Script</button>
 
 </div>
 
 <div class="box">
 
-  <h2>📊 OUTPUT</h2>
+  <h2>📊 VIRAL OUTPUT</h2>
 
   <div id="out" class="output"></div>
 
@@ -118,68 +118,64 @@ let g = document.getElementById("genre").value || "General";
 
 let c = document.getElementById("concept").value || "No concept";
 
-let result = `
+let hook = `⚡ STOP SCROLLING...`;
+
+let emotionalHook = `This is something you were never told about ${c}...`;
+
+let script = `
 
 🎬 TITLE: ${t}
 
 📚 GENRE: ${g}
 
-🧠 CORE CONCEPT:
+🔥 VIRAL HOOK:
 
-${c}
+${hook}
 
------------------------
+🧠 EMOTIONAL OPENING:
 
-🔍 RESEARCH:
+${emotionalHook}
 
-- Origin of ${c}
+✍️ STORY SCRIPT:
 
-- Key facts
+Long ago, everything was normal...
 
-- Emotional angle
+But then ${c} changed everything forever...
 
-✍️ SCRIPT (HOOK):
+Nobody expected what happened next...
 
-This is the untold story of ${c}...
+History took a shocking turn...
 
-Everything changed in a single moment...
+🎬 SCENE FLOW:
 
-🎬 SCENES:
+1. Shock Hook (0-3 sec)
 
-1. Hook (0-3 sec)
+2. Mystery Question
 
-2. Mystery
+3. Rising Conflict
 
-3. Build-up
+4. Big Twist
 
-4. Twist
+5. Emotional Ending
 
-5. Ending
+📈 VIRAL TITLE IDEAS:
 
-🎨 AI PROMPTS:
+- You Won’t Believe the Truth of ${t}
 
-- Cinematic ${c}
+- The Dark Secret Behind ${c}
 
-- Ultra realistic
+- This Changed Everything Forever
 
-- Dramatic lighting
+🔥 HASHTAGS:
 
-- Movie style visuals
-
-📈 YOUTUBE TITLE IDEAS:
-
-- The Secret of ${t}
-
-- Untold Story of ${c}
-
-- Why ${c} Changed Everything
+#viral #story #history #ai #youtube #shorts
 
 `;
 
-document.getElementById("out").innerText = result;
-
+document.getElementById("out").innerText = script;
 }
 </script>
-  
+
 </body>
 </html>
+  
